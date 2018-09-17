@@ -1,0 +1,17 @@
+<div class="row" [ngClass]="view === 'small' ? 'small-user-list' : 'user-list'">
+  <div class="col-12">
+    <div *ngFor="let user of userList; let i = index" >
+      <div (click)="swapPage(user)" class="user-list-item" [ngClass]="user.login === selectedUser ? 'selected-list-item' : ''">
+        <img [src]="user.avatar" class="img-circle responsive user-img">
+        <span *ngIf="view !== 'small'">{{user.firstName}} {{user.lastName}}</span>
+        <span class="glyphicon glyphicon-user pull-right item-icon" *ngIf="view === 'large'"></span>
+        <span class="glyphicon glyphicon glyphicon-play pull-right selected-item-icon" *ngIf="user.login === selectedUser && view !== 'small'"></span>
+        <div *ngIf="view === 'small'" class="vertical-separator"></div>
+      </div>
+      <div *ngIf="i < userList.length - 1" class="user-list-separator"></div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,28 @@
+<div class="container fix-width">
+  <div class="row">
+    <div class="col-xs-5 col-md-4">
+      <app-user-list view="middle" [selectedLogin]="selectedLogin"></app-user-list>
+    </div>
+    <div class="col-xs-7 col-md-8 user-info-card">
+      <div *ngIf="user">
+        <div class="row">
+          <div class="col-xs-5 col-md-5">
+            <img [src]="user.avatar" class="img-thumbnail">
+            <button type="button" class="btn btn-default gold-button" (click)="swapPage(selectedLogin)">Write a message</button>
+          </div>
+          <div class="col-xs-7 col-md-7">
+            <h2>{{user.firstName}} {{user.lastName}}</h2>
+            <div class="separator"></div>
+            <div class="user-age-city">
+              <span>Age:</span><p>{{user.age}}</p>
+              <span>Place of Birth:</span><p>{{user.city}}</p>
+            </div>
+            <div class="separator"></div>
+            <div>{{user.about}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

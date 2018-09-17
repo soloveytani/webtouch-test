@@ -1,0 +1,32 @@
+<div class="container fix-width">
+  <div class="row">
+    <div class="col-xs-1 col-md-1">
+      <app-user-list view="small" [selectedLogin]="selectedLogin"></app-user-list>
+    </div>
+    <div class="col-xs-11 col-md-11 user-chat">
+      <div *ngIf="userChat" class="chat-container">
+        <div *ngFor="let message of userChat.messages" class="user-chat-item">
+          <div class="user-chat-avatar">
+            <img *ngIf="message.type === 'incoming'" [src]="userChat.avatar" class="img-circle responsive user-img">
+            <img *ngIf="message.type === 'outgoing'" src="https://habrastorage.org/getpro/moikrug/uploads/user/100/021/586/1/avatar/medium_1a20615b74f7e0999a4786d0c31d3cf5.jpg" class="img-circle responsive user-img">
+          </div>
+          <div class="user-chat-message">
+            <p *ngIf="message.type === 'incoming'" class="user-chat-name">{{userChat.firstName}} {{userChat.lastName}}</p>
+            <p *ngIf="message.type === 'outgoing'" class="user-chat-name">Tatiana Solovey</p>
+            <p>{{message.text}}</p>
+          </div>
+        </div>
+        <div *ngIf="!(userChat.messages.length > 0)" class="no-message-container">
+          <p>Here will be your chat with {{userChat.firstName}}</p>
+        </div>
+      </div>
+      <div class="message-container">
+        <div class="form-group">
+          <label for="comment">Your message</label>
+          <textarea class="form-control" rows="5" id="comment" [(ngModel)]="currentMessage" (keyup.enter)="sendMessage()"></textarea>
+        </div>
+        <button type="button" class="btn btn-default gold-button" [disabled]="currentMessage === ''" (click)="sendMessage()">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>

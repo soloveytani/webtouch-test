@@ -1,0 +1,54 @@
+.fix-width {
+  max-width: 800px;
+  padding: 0;
+}
+
+.user-info-card {
+  padding: 20px;
+}
+
+.user-info-card h2{
+  font-size: 20px;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(128, 42, 58, 0.2);
+  margin-bottom: 20px;
+}
+
+.user-info-card .img-thumbnail {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.user-age-city {
+  position: relative;
+}
+
+.user-age-city span {
+  color: rgba(87, 70, 81, 0.56);
+  font-size: 13px;
+  line-height: 26px;
+  display: block;
+  position: absolute;
+  width: 100px;
+}
+
+.user-age-city p {
+  color: #532331;
+  font-size: 15px;
+  margin-left: 100px;
+}
+
+.gold-button {
+  background-color: #c69972;
+  margin-top: 10px;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.gold-button:hover {
+  background-color: #e7cb8b;
+}

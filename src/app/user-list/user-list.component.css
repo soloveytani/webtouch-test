@@ -1,0 +1,81 @@
+.small-user-list,
+.user-list {
+  background-color: #ffffff;
+  margin-top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.small-user-list {
+  padding: 6px;
+}
+
+.user-list {
+  padding: 8px 16px;
+}
+
+.user-list ul, .small-user-list ul {
+  margin-bottom: 0;
+}
+
+.user-list-separator {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(128, 42, 58, 0.2);
+}
+
+.user-list-item {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.small-user-list .user-list-item {
+  padding: 12px 0;
+  text-align: center;
+}
+
+.user-list-item:hover {
+  color: #e7cb8b;
+}
+
+.user-list .user-list-item:hover .user-img {
+  margin-left: -10px;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.user-list .user-img {
+  margin-right: 10px;
+}
+
+.user-list .selected-list-item {
+  margin-left: -10px;
+}
+
+.selected-item-icon, .item-icon {
+  line-height: 40px;
+  font-size: 13px;
+}
+
+.selected-item-icon {
+  margin-right: -12px;
+  -webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+  -moz-transform: rotate(180deg);        /* FF */
+  -o-transform: rotate(180deg);          /* Opera */
+  -ms-transform: rotate(180deg);         /* IE9 */
+  transform: rotate(180deg);
+}
+
+.small-user-list .selected-list-item .vertical-separator,
+.small-user-list .user-list-item:hover .vertical-separator{
+  float: right;
+  width: 2px;
+  height: 40px;
+  margin-left: 5px;
+  background-color: #802a3a;
+}
